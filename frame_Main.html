@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nội Dung Chính</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 30px;
+            min-height: 100vh;
+        }
+        
+        .welcome-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        
+        .welcome-box h1 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .welcome-box p {
+            font-size: 1.1rem;
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.05rem;
+            font-style: italic;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(245, 87, 108, 0.3);
+        }
+        
+        .section-title {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .exercises-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+        
+        .exercise-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 18px;
+            background: white;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+        
+        .exercise-item:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateX(5px);
+            border-left-color: #fff;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .exercise-item .number {
+            background: #667eea;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+        
+        .exercise-item:hover .number {
+            background: white;
+            color: #667eea;
+        }
+        
+        .basic-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .basic-item {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .basic-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(56, 239, 125, 0.4);
+        }
+        
+        .basic-item .icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+        
+        .basic-item .title {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-box">
+        <h1>Chào Mừng Bạn!</h1>
+        <p>Vui Lòng Chọn Bài Tập Để Xem</p>
+    </div>
+    
+    <div class="quote-box">
+        "Tiền không mua được hạnh phúc, nhưng nó giúp bạn đau khổ ở một nơi sang trọng hơn..."
+    </div>
+    
+    <div class="basic-grid">
+        <a href="Bai1/index.html" class="basic-item">
+            <div class="icon">📖</div>
+            <div class="title">Bài 1</div>
+        </a>
+        <a href="Bai2/index.html" class="basic-item">
+            <div class="icon">📝</div>
+            <div class="title">Bài 2</div>
+        </a>
+        <a href="Bai3/index.html" class="basic-item">
+            <div class="icon">🎨</div>
+            <div class="title">Bài 3</div>
+        </a>
+        <a href="Bai4/index.html" class="basic-item">
+            <div class="icon">🖼️</div>
+            <div class="title">Bài 4</div>
+        </a>
+    </div>
+    
+    <h2 class="section-title">📝 Bài Tập HTML (15 bài)</h2>
+    <div class="exercises-grid">
+        <a href="BaiTapHTML/HTML/1_.html" class="exercise-item" target="_blank"><span class="number">1</span>Bài 1</a>
+        <a href="BaiTapHTML/HTML/2_Cohaimo.html" class="exercise-item" target="_blank"><span class="number">2</span>Có hai mơ</a>
+        <a href="BaiTapHTML/HTML/3_ChisoTrenduoi.html" class="exercise-item" target="_blank"><span class="number">3</span>Chỉ số</a>
+        <a href="BaiTapHTML/HTML/4_Kyhieudacbiet.html" class="exercise-item" target="_blank"><span class="number">4</span>Ký hiệu</a>
+        <a href="BaiTapHTML/HTML/5_Hieuungvb.html" class="exercise-item" target="_blank"><span class="number">5</span>Hiệu ứng</a>
+        <a href="BaiTapHTML/HTML/6_ChuongTrinhDTWeb1.html" class="exercise-item" target="_blank"><span class="number">6</span>CT Web 1</a>
+        <a href="BaiTapHTML/HTML/7_ChuongTrinhDTWeb2.html" class="exercise-item" target="_blank"><span class="number">7</span>CT Web 2</a>
+        <a href="BaiTapHTML/HTML/8_ChuongTrinhDTWeb.html" class="exercise-item" target="_blank"><span class="number">8</span>CT Web 3</a>
+        <a href="BaiTapHTML/HTML/9_ChuongTrinhDTTHVP.html" class="exercise-item" target="_blank"><span class="number">9</span>CT THVP</a>
+        <a href="BaiTapHTML/HTML/10_TaisanBill.htm" class="exercise-item" target="_blank"><span class="number">10</span>Tài sản Bill</a>
+        <a href="BaiTapHTML/HTML/11_Nhacnen.html" class="exercise-item" target="_blank"><span class="number">11</span>Nhạc nền</a>
+        <a href="BaiTapHTML/HTML/12_ChuongTrinhDaoTao.html" class="exercise-item" target="_blank"><span class="number">12</span>CT Đào Tạo</a>
+        <a href="BaiTapHTML/HTML/13_DanhBaWeb.html" class="exercise-item" target="_blank"><span class="number">13</span>Danh Bạ Web</a>
+        <a href="BaiTapHTML/HTML/14_Albumnhac.html" class="exercise-item" target="_blank"><span class="number">14</span>Album Nhạc</a>
+        <a href="BaiTapHTML/HTML/15_KetQuaHocTap.html" class="exercise-item" target="_blank"><span class="number">15</span>KQ Học Tập</a>
+    </div>
+</body>
+</html>

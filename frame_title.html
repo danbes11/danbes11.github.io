@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Trang Chủ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            background: linear-gradient(90deg, #2d2d44 0%, #1a1a2e 100%);
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 4px solid #e94560;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            min-height: 180px;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        
+        .logo-section img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid #e94560;
+            box-shadow: 0 0 25px rgba(233, 69, 96, 0.5);
+        }
+        
+        .title-text {
+            color: #fff;
+        }
+        
+        .title-text h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+        }
+        
+        .title-text h1 span {
+            color: #e94560;
+        }
+        
+        .marquee-container {
+            background: linear-gradient(90deg, #e94560 0%, #c23a51 100%);
+            padding: 12px 20px;
+            border-radius: 25px;
+            max-width: 600px;
+        }
+        
+        .marquee-container marquee {
+            color: #fff;
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+        
+        .tagline {
+            color: #feca57;
+            font-size: 1.4rem;
+            font-style: italic;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-section">
+            <img src="image/logo.png" alt="Logo" onerror="this.style.display='none'">
+            <div class="title-text">
+                <h1>Trang Web <span>Bài Tập HTML</span></h1>
+                <p class="tagline">Đừng lo lắng về ngày mai, vì ngày mai bạn vẫn còn phải lo về ngày mốt.</p>
+            </div>
+        </div>
+        <div class="marquee-container">
+            <marquee behavior="alternate" scrollamount="4">
+                Tiền không mua được hạnh phúc, nhưng nó giúp bạn đau khổ ở một nơi sang trọng hơn...
+            </marquee>
+        </div>
+    </div>
+</body>
+</html>

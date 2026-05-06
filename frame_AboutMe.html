@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Footer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(90deg, #1a1a2e 0%, #0f0f1a 100%);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .footer {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 3px solid #e94560;
+        }
+        
+        .marquee-container {
+            background: linear-gradient(135deg, #e94560 0%, #c23a51 100%);
+            padding: 8px 30px;
+            border-radius: 20px;
+        }
+        
+        .marquee-container marquee {
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="footer">
+        <div class="marquee-container">
+            <marquee behavior="alternate" scrollamount="4">
+                Website designed by Danbii © 2026
+            </marquee>
+        </div>
+    </div>
+</body>
+</html>
