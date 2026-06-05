@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Right Sidebar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body, html {
+            height: 100%;
+            overflow-y: auto;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: transparent;
+        }
+        
+        .sidebar {
+            padding: 12px 8px;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4px 12px 8px;
+            color: #65676b;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        
+        .section-header .icon-btn {
+            width: 28px;
+            height: 28px;
+            background: #e4e6eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        
+        .section-header .icon-btn:hover {
+            background: #d8dadf;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .contact-item:hover {
+            background: #e4e6eb;
+        }
+        
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: white;
+            position: relative;
+        }
+        
+        .avatar.online::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            background: #31a24c;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        
+        .avatar.red { background: #f44336; }
+        .avatar.pink { background: #e91e63; }
+        .avatar.purple { background: #9c27b0; }
+        .avatar.blue { background: #2196f3; }
+        .avatar.teal { background: #009688; }
+        .avatar.green { background: #4caf50; }
+        .avatar.orange { background: #ff9800; }
+        .avatar.brown { background: #795548; }
+        
+        .contact-name {
+            flex: 1;
+            font-size: 0.9rem;
+            color: #1c1e21;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="section-header">
+            <span>Messenger</span>
+            <div style="display: flex; gap: 8px;">
+                <div class="icon-btn">📹</div>
+                <div class="icon-btn">🔍</div>
+            </div>
+        </div>
+        
+        <div class="contact-item">
+            <div class="avatar pink online">P</div>
+            <span class="contact-name">Phường Thì ~</span>
+        </div>
+        <div class="contact-item">
+            <div class="avatar blue online">D</div>
+            <span class="contact-name">Dương Dương</span>
+        </div>
+        <div class="contact-item">
+            <div class="avatar green online">Q</div>
+            <span class="contact-name">Quỳnh Như ~</span>
+        </div>
+        <div class="contact-item">
+            <div class="avatar purple">T</div>
+            <span class="contact-name">Thúy Kiều</span>
+        </div>
+    </div>
+</body>
+</html>
