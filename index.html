@@ -1,32 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang Web Bài Tập HTML</title>
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background: #f0f2f5;
+        }
+        
+        /* Header FB */
+        .header {
+            height: 180px;
+            flex-shrink: 0;
+            background: #1877f2;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+        
+        /* Main Content - 3 columns */
+        .main-content {
+            display: flex;
+            flex: 1;
+            min-height: 0;
             overflow: hidden;
         }
         
-        frameset {
-            border: none;
+        /* Left Sidebar */
+        .sidebar-left {
+            width: 280px;
+            flex-shrink: 0;
+            background: #ffffff;
+            overflow-y: auto;
+            border-right: 1px solid #dadde1;
         }
         
-        frame {
+        .sidebar-left iframe {
+            width: 100%;
+            height: 100%;
             border: none;
+            display: block;
+        }
+        
+        /* Center Content */
+        .content-center {
+            flex: 1;
+            min-width: 0;
+            background: #f0f2f5;
+            overflow-y: auto;
+        }
+        
+        .content-center iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+        
+        /* Right Sidebar */
+        .sidebar-right {
+            width: 280px;
+            flex-shrink: 0;
+            background: #ffffff;
+            overflow-y: auto;
+            border-left: 1px solid #dadde1;
+        }
+        
+        .sidebar-right iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+        
+        /* Footer */
+        .footer {
+            height: 30px;
+            flex-shrink: 0;
+            background: #ffffff;
+            border-top: 1px solid #dadde1;
+        }
+        
+        .footer iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
         }
     </style>
 </head>
-<frameset rows="180,*,50" cols="*">
-    <frame scrolling="no" name="frame_title" noresize="yes" src="frame_title.html">
-    <frameset rows="*" cols="200,*">
-        <frame scrolling="yes" name="frame_content" src="frame_content.html">
-        <frame scrolling="yes" name="frame_Main" src="frame_Main.html">	
-    </frameset>	
-    <frame scrolling="no" name="frame_AboutMe" noresize="yes" src="frame_AboutMe.html">
-    <noframes>Xin lỗi, trình duyệt không trợ giúp frame</noframes>
-</frameset>
+<body>
+    <div class="container">
+        <header class="header">
+            <iframe src="frame_title.html" title="Tiêu đề trang"></iframe>
+        </header>
+        
+        <div class="main-content">
+            <aside class="sidebar-left">
+                <iframe src="frame_content.html" title="Menu điều hướng"></iframe>
+            </aside>
+            
+            <main class="content-center">
+                <iframe src="frame_Main.html" name="frame_Main" title="Nội dung chính"></iframe>
+            </main>
+            
+            <aside class="sidebar-right">
+                <iframe src="frame_right.html" title="Người liên hệ"></iframe>
+            </aside>
+        </div>
+        
+        <footer class="footer">
+            <iframe src="frame_AboutMe.html" title="Thông tin"></iframe>
+        </footer>
+    </div>
+</body>
 </html>
